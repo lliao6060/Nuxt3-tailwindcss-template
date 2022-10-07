@@ -31,7 +31,8 @@ const { data } = await useAsyncData('api/return-name', () => {
   })
 })
 
-console.log(data)
+console.log(data.value)
+console.log(import.meta.env)
 </script>
 
 <template>
@@ -77,14 +78,14 @@ console.log(data)
             Pinia
           </p>
         </NuxtLink>
-        <NuxtLink to="/parent" class="basic-button">
+        <NuxtLink to="/nested" class="basic-button">
           <p class="flex-center">
-            Parent
+            Nested
           </p>
         </NuxtLink>
-        <NuxtLink to="/users-admins/123" class="basic-button">
+        <NuxtLink to="/user" class="basic-button">
           <p class="flex-center">
-            Dynamic params page (/users-admins/123)
+            Dynamic params page
           </p>
         </NuxtLink>
       </div>

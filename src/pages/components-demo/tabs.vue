@@ -1,6 +1,15 @@
-<script setup>
+<script setup lang="ts">
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 
+const title = ref<string | any>('Tabs Page')
+const description = ref<string>('Tabs Page Description')
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description,
+  }],
+})
 const categories = ref({
   Recent: [
     {

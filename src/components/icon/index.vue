@@ -2,7 +2,7 @@
 import { Icon } from '@iconify/vue'
 
 interface IconProps {
-  icon: string
+  icon?: string
   size?: number | string
   color?: string
 }
