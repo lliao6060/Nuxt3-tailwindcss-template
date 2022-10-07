@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia'
 import type { Ref } from 'vue'
 
-interface CounterState {
+interface AppState {
   n: number
   myRef: Ref<string>
 }
 
 export const useAppStore = defineStore('App', {
-  state: (): CounterState => ({
+  state: (): AppState => ({
     n: 5,
     myRef: ref('hello'),
   }),

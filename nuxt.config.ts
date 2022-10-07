@@ -30,16 +30,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     ['unplugin-auto-import/nuxt', autoImportOpts],
   ],
-  // proxy: {
-  //   // Using the proxy instance
-  //   '/api': {
-  //     target: 'http://localhost:3088/',
-  //     changeOrigin: true,
-  //     configure: (proxy, options) => {
-  //       // proxy will be an instance of 'http-proxy'
-  //     },
-  //   },
-  // },
   build: {
     transpile: ['@headlessui/vue'],
   },
@@ -70,5 +60,15 @@ export default defineNuxtConfig({
   vite: {
     envDir: pathResolve('./src/env'),
     logLevel: 'info',
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://example.com',
+          pathRewrite: {
+            '^/api': '/',
+          },
+        },
+      },
+    },
   },
 })

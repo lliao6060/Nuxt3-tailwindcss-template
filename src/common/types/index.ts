@@ -4,3 +4,8 @@ export interface ILink {
   url: any
   icon: string
 }
+
+export interface ListItem {
+  id: number
+  title: string
+}

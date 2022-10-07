@@ -15,7 +15,7 @@ useHead({
 
 <template>
   <div>
-    <NuxtLink to="/" class="basic-button">
+    <NuxtLink to="/" class="basic-shadow-button">
       Back Home
     </NuxtLink>
     <div class="global-text">

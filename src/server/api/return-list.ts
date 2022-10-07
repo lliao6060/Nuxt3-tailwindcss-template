@@ -11,7 +11,7 @@ const list = {
 
 export default async function () {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  return new Promise((resolve, reject?: any) => {
+  return new Promise((resolve, reject?: unknown) => {
     setTimeout(() => {
       resolve(list)
     }, 1000)
