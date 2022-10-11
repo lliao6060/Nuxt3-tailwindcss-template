@@ -6,7 +6,7 @@
     <div class="grid grid-cols-2 gap-4 w-4/5 mx-auto">
       <div class="w-full h-full">
         <NuxtLink to="/" class="h-full flex items-center justify-start">
-          Logo
+          LOGO
         </NuxtLink>
       </div>
       <div class="w-full h-full flex items-center justify-end">

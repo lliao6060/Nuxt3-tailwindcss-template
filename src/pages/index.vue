@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ListItem } from '~/common/types'
+import { demoComponents, demoPageList } from '~/static'
 
 const { t } = useLang()
 const title = ref<string | any>('Index Page')
@@ -53,19 +54,14 @@ console.log(data.value)
         Components
       </h3>
       <div class="grid grid-cols-3 gap-4">
-        <NuxtLink to="/components-demo/menu" class="basic-shadow-button">
+        <NuxtLink
+          v-for="demoPageItem in demoComponents"
+          :key="demoPageItem.path"
+          :to="`/components-demo/${demoPageItem.path}`"
+          class="basic-shadow-button"
+        >
           <p class="flex-center">
-            Menu
-          </p>
-        </NuxtLink>
-        <NuxtLink to="/components-demo/modal" class="basic-shadow-button">
-          <p class="flex-center">
-            Modal
-          </p>
-        </NuxtLink>
-        <NuxtLink to="/components-demo/tabs" class="basic-shadow-button">
-          <p class="flex-center">
-            Tabs
+            {{ demoPageItem.name }}
           </p>
         </NuxtLink>
       </div>
@@ -76,24 +72,14 @@ console.log(data.value)
         Page Demos
       </h3>
       <div class="grid grid-cols-3 gap-4">
-        <NuxtLink to="/pinia" class="basic-shadow-button">
+        <NuxtLink
+          v-for="demoPageItem in demoPageList"
+          :key="demoPageItem.path"
+          :to="`/${demoPageItem.path}`"
+          class="basic-shadow-button"
+        >
           <p class="flex-center">
-            Pinia
-          </p>
-        </NuxtLink>
-        <NuxtLink to="/nested" class="basic-shadow-button">
-          <p class="flex-center">
-            Nested
-          </p>
-        </NuxtLink>
-        <NuxtLink to="/user" class="basic-shadow-button">
-          <p class="flex-center">
-            Dynamic params page
-          </p>
-        </NuxtLink>
-        <NuxtLink to="/counter/increment" class="basic-shadow-button">
-          <p class="flex-center">
-            Demo UseState Hook
+            {{ demoPageItem.name }}
           </p>
         </NuxtLink>
       </div>

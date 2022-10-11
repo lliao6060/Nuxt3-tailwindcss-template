@@ -10,6 +10,8 @@ const locale = useState<string>('locale.i18n')
       class="bg-white text-gray-800 antialiased transition-colors duration-300 dark:bg-gray-900 dark:text-white"
     >
       <NuxtLayout>
+        <!-- Nuxt 3 提供的頁面載入的進度條 -->
+        <NuxtLoadingIndicator />
         <NuxtPage />
       </NuxtLayout>
     </Body>
