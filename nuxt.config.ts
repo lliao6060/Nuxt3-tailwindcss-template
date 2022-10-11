@@ -60,15 +60,15 @@ export default defineNuxtConfig({
   vite: {
     envDir: pathResolve('./src/env'),
     logLevel: 'info',
-    server: {
-      proxy: {
-        '/api': {
-          target: 'http://example.com',
-          pathRewrite: {
-            '^/api': '/',
-          },
-        },
-      },
-    },
+    // server: {
+    //   proxy: {
+    //     '/api': {
+    //       target: 'http://example.com',
+    //       pathRewrite: {
+    //         '^/api': '/',
+    //       },
+    //     },
+    //   },
+    // },
   },
 })

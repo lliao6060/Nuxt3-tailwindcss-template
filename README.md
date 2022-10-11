@@ -10,6 +10,7 @@
 - [@iconify/vue](https://docs.iconify.design/icon-components/vue/)
 - [Pinia](https://github.com/posva/pinia)
   - [為你的 Store 添加持久化配置(Persist)](https://ithelp.ithome.com.tw/articles/10302381)
+- [ohmyfetch Nuxt3原生使用](https://github.com/unjs/ohmyfetch)
 
 ### plugins for Tailwind UI:
 

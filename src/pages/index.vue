@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ListItem } from '~/common/types'
 import { demoComponents, demoPageList } from '~/static'
+import { apiFetch } from '~/server/api'
 
 const { t } = useLang()
 const title = ref<string | any>('Index Page')
@@ -22,20 +23,33 @@ console.log($hello('maju'))
 const apiData = ref<ListItem[]>([])
 
 // fetch data from server/api
-const res: any = await useAsyncData('list', () => $fetch('/api/return-list'))
-const { result } = res.data.value
-if (result)
-  apiData.value = result.list
+const getList = async () => {
+  const res = await apiFetch('return-list')
 
-const { data } = await useAsyncData('api/return-name', () => {
-  return $fetch('/api/return-name', {
-    params: {
-      name: 'maju',
-    },
+  if (res.data)
+    apiData.value = res.data.list
+}
+
+const sayHello = async () => {
+  const res = await apiFetch('sayhello')
+
+  if (res.data)
+    console.log(res.data)
+}
+
+const sayHelloWithName = async () => {
+  const res = await apiFetch('return-name', {
+    params: { name: 'maju' },
   })
+
+  console.log(res)
+}
+
+onMounted(async () => {
+  const apiList = [getList(), sayHello(), sayHelloWithName()]
+  await Promise.all(apiList)
 })
 
-console.log(data.value)
 // console.log(import.meta.env)
 </script>
 
