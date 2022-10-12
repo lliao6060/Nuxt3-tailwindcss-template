@@ -60,6 +60,14 @@ export default defineNuxtConfig({
   vite: {
     envDir: pathResolve('./src/env'),
     logLevel: 'info',
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // 全局提供 variables裡包含了mixin、palette
+          additionalData: '@import "~/assets/scss/_variables.scss";',
+        },
+      },
+    },
     // server: {
     //   proxy: {
     //     '/api': {
@@ -71,4 +79,8 @@ export default defineNuxtConfig({
     //   },
     // },
   },
+  // 全局css
+  css: [
+    '~/assets/scss/app.scss',
+  ],
 })
