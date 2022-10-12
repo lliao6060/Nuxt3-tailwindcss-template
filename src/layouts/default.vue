@@ -7,7 +7,7 @@
     <main class="w-4/5">
       <slot />
     </main>
-    <footer class="bg-sky-300 flex-center">
+    <footer class="bg-sky-600 flex-center">
       footer
     </footer>
   </div>

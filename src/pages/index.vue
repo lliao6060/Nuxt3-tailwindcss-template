@@ -24,7 +24,7 @@ const apiData = ref<ListItem[]>([])
 
 // fetch data from server/api
 const getList = async () => {
-  const res = await apiFetch('return-list')
+  const res = await apiFetch('list')
 
   if (res.data)
     apiData.value = res.data.list
