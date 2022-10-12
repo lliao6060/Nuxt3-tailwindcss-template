@@ -31,7 +31,7 @@ const getList = async () => {
 }
 
 const getNameAndGreeting = async () => {
-  const res = await apiFetch('return-name', {
+  const res = await apiFetch('greeting', {
     params: { name: 'maju' },
   })
 

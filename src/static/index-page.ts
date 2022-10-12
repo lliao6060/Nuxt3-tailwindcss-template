@@ -25,6 +25,10 @@ export const demoPageList: demoPage[] = [
     path: 'nested',
   },
   {
+    name: 'Demo different layout',
+    path: 'different-layout',
+  },
+  {
     name: 'Dynamic params user page',
     path: 'user',
   },
@@ -33,7 +37,7 @@ export const demoPageList: demoPage[] = [
     path: 'counter/increment',
   },
   {
-    name: 'Demo different layout',
-    path: 'different-layout',
+    name: 'Demo UseFeatch Hook',
+    path: 'about/use-featch',
   },
 ]
