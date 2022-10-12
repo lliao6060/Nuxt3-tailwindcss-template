@@ -37,7 +37,7 @@ const toggleMenu = (): void => {
             class="
               w-full
               hidden
-              xl:block
+              xl:flex-center
             "
           >
             <NavbarMenuList />

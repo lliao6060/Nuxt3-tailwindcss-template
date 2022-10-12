@@ -18,7 +18,7 @@ watch(localeUserSetting, () => {
 </script>
 
 <template>
-  <div>
+  <div class="flex-center">
     <Listbox
       v-model="localeUserSetting"
       as="div"

@@ -27,7 +27,7 @@ const availableColor = ref([
 </script>
 
 <template>
-  <div>
+  <div class="flex-center">
     <Listbox
       v-model="$colorMode.preference"
       as="div"

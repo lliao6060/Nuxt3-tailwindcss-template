@@ -13,7 +13,7 @@ useHead({
 
 <template>
   <div>
-    <div class="fixed top-16 w-56">
+    <div class="fixed w-56">
       <Menu as="div" class="relative inline-block text-left">
         <div>
           <MenuButton
