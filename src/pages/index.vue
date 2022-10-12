@@ -30,14 +30,7 @@ const getList = async () => {
     apiData.value = res.data.list
 }
 
-const sayHello = async () => {
-  const res = await apiFetch('sayhello')
-
-  if (res.data)
-    console.log(res.data)
-}
-
-const sayHelloWithName = async () => {
+const getNameAndGreeting = async () => {
   const res = await apiFetch('return-name', {
     params: { name: 'maju' },
   })
@@ -46,7 +39,7 @@ const sayHelloWithName = async () => {
 }
 
 onMounted(async () => {
-  const apiList = [getList(), sayHello(), sayHelloWithName()]
+  const apiList = [getList(), getNameAndGreeting()]
   await Promise.all(apiList)
 })
 

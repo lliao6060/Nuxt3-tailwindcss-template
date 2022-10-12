@@ -1,6 +1,5 @@
 const list = {
   code: 200,
-  message: '請求成功',
   data: {
     list: [
       { id: 1, title: '標題1' },
@@ -9,11 +8,11 @@ const list = {
   },
 }
 
-export default async function () {
+export default defineEventHandler(async () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return new Promise((resolve, reject?: unknown) => {
     setTimeout(() => {
       resolve(list)
     }, 1000)
   })
-}
+})
