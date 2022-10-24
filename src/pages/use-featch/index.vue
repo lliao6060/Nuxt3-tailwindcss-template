@@ -1,4 +1,4 @@
-<script setup>
+<script setup name="UseFeatchDemo">
 const { data, pending, error, refresh } = await useLazyFetch('/api/about', {
   pick: ['name', 'counter'],
 })

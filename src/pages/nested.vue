@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Nested">
 const title = ref<string | any>('Nested Page')
 const description = ref<string>('Nested Page Description')
 useHead({

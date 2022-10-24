@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="App">
 import { InitApp } from '~/utils/initApp'
 InitApp()
 const locale = useState<string>('locale.i18n')

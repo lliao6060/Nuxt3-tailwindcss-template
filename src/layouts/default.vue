@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div id="default-layout" class="layout select-none">
+  <div class="default-layout layout select-none">
     <Navbar />
     <main
       class="
@@ -22,7 +22,7 @@
 </template>
 
 <style lang="scss" scoped>
-#default-layout {
+.default-layout {
   width: 100vw;
   height: 100vh;
   display: flex;

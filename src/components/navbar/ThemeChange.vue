@@ -11,17 +11,17 @@ const availableColor = ref([
   {
     id: 1,
     name: 'system',
-    icon: 'i-ph-laptop-duotone',
+    icon: 'heroicons-solid:desktop-computer',
   },
   {
     id: 2,
     name: 'dark',
-    icon: 'i-ph-moon-stars-duotone',
+    icon: 'ri:moon-clear-fill',
   },
   {
     id: 3,
     name: 'light',
-    icon: 'i-ph-sun-dim-duotone',
+    icon: 'ic:sharp-light-mode',
   },
 ])
 </script>
@@ -40,7 +40,7 @@ const availableColor = ref([
         <div
           class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700"
         >
-          <Icon icon="material-symbols:wb-sunny-outline-rounded" />
+          <Icon icon="mdi:theme-light-dark" size="25" />
         </div>
       </ListboxButton>
       <ListboxOptions class="list-box-options">
@@ -60,7 +60,7 @@ const availableColor = ref([
             {{ color.name }}
           </span>
           <span class="flex items-center justify-center text-sm">
-            <Icon :class="color.icon" class="text-base" />
+            <Icon :icon="color.icon" class="text-base" />
           </span>
         </ListboxOption>
       </ListboxOptions>

@@ -1,4 +1,4 @@
-<script setup>
+<script setup name="NestedChild2">
 </script>
 
 <template>

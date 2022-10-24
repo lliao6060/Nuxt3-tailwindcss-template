@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Index">
 import type { ListItem } from '~/common/types'
 import { demoComponents } from '~/static'
 import { apiFetch } from '~/server/api'

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="404Page">
 const title = ref<string | any>('404')
 const description = ref<string>('404 Page Description')
 useHead({

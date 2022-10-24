@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="DifferentLayout">
 const title = ref<string | any>('different layout Page')
 const description = ref<string>('different layout Page Description')
 useHead({

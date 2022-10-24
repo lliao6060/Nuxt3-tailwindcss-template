@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Menu">
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 const title = ref<string | any>('Menu Page')
 const description = ref<string>('Menu Page Description')

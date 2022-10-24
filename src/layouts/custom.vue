@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div id="default-layout" class="layout select-none">
+  <div class="custom-layout layout select-none">
     <!-- <Navbar /> -->
     <nav class="bg-red-400 flex-center">
       <div class="w-4/5 grid grid-cols-3 gap-4">
@@ -24,7 +24,7 @@
 </template>
 
 <style lang="scss" scoped>
-#default-layout {
+.custom-layout {
   width: 100vw;
   height: 100vh;
   display: flex;

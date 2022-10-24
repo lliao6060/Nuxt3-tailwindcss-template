@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Tabs">
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 
 const title = ref<string | any>('Tabs Page')

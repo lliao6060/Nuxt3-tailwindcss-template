@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     '@intlify/nuxt3',
     '@nuxtjs/color-mode',
     ['unplugin-auto-import/nuxt', autoImportOpts],
+    'vite-plugin-vue-setup-extend',
   ],
   build: {
     transpile: ['@headlessui/vue'],

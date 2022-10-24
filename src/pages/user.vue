@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="User">
 const route = useRoute()
 const title = ref<string | any>('User Page')
 const description = ref<string>('User Page Description')

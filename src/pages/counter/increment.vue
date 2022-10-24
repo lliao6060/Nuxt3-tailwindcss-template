@@ -1,4 +1,4 @@
-<script setup>
+<script setup name="CounterIncrement">
 const counter = useState('counter', () => 0)
 </script>
 

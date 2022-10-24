@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Pinia">
 import { useAppStore } from '~~/src/store/app'
 
 const counter = useAppStore()
