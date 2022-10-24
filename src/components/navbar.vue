@@ -85,6 +85,7 @@ const toggleMenu = (): void => {
       <NavbarMenuList
         class="hidden"
         :class="{ 'd-block': isMenuShow }"
+        @on-nav-item-click="isMenuShow = false"
       />
     </div>
   </header>

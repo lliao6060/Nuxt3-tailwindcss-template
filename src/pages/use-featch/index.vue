@@ -1,5 +1,5 @@
 <script setup>
-const { data, pending, error, refresh } = await useFetch('/api/about', {
+const { data, pending, error, refresh } = await useLazyFetch('/api/about', {
   pick: ['name', 'counter'],
 })
 </script>

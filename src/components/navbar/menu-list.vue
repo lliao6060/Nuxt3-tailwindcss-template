@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { demoPageList } from '~/static'
+const emit = defineEmits(['onNavItemClick'])
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import { demoPageList } from '~/static'
       v-for="(menuItem, i) in demoPageList"
       :key="`menuItem-${i}`"
       class="md:text-lg"
+      @click="emit('onNavItemClick')"
     >
       <NuxtLink
         :key="menuItem.path"
