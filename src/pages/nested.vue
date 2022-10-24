@@ -17,9 +17,6 @@ useHead({
     </h1>
     <NuxtChild />
     <div class="flex space-x-2">
-      <NuxtLink to="/" class="basic-tab-button bg-cyan-500 shadow-cyan-500/50">
-        Back Home
-      </NuxtLink>
       <NuxtLink to="/nested/child" class="basic-tab-button bg-blue-500 shadow-blue-500/50">
         Go /nested/child
       </NuxtLink>

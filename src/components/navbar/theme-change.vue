@@ -43,9 +43,7 @@ const availableColor = ref([
           <Icon icon="material-symbols:wb-sunny-outline-rounded" />
         </div>
       </ListboxButton>
-      <ListboxOptions
-        class="absolute top-full right-0 z-[999] mt-2 w-40 overflow-hidden rounded-lg bg-white text-sm font-semibold text-gray-700 shadow-lg shadow-gray-300 outline-none dark:bg-gray-800 dark:text-white dark:shadow-gray-500 dark:ring-0"
-      >
+      <ListboxOptions class="list-box-options">
         <ListboxOption
           v-for="color in availableColor"
           :key="color.id"

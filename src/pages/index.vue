@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ListItem } from '~/common/types'
-import { demoComponents, demoPageList } from '~/static'
+import { demoComponents } from '~/static'
 import { apiFetch } from '~/server/api'
 
 const { t } = useLang()
@@ -47,11 +47,12 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div>
-    <p class="text-red-600 dark:text-red-200">
+  <div class="w-full mx-auto text-center align-center">
+    <h1 class="title">
       {{ t('hello') }}
-    </p>
-    <p>
+    </h1>
+    <p>{{ $i18n.locale }}</p>
+    <!-- <p>
       api data
       <code>{{ apiData }}</code>
     </p>
@@ -72,24 +73,6 @@ onMounted(async () => {
           </p>
         </NuxtLink>
       </div>
-    </div>
-
-    <div>
-      <h3 class="text-xl font-bold py-4">
-        Page Demos
-      </h3>
-      <div class="grid grid-cols-3 gap-4">
-        <NuxtLink
-          v-for="demoPageItem in demoPageList"
-          :key="demoPageItem.path"
-          :to="`/${demoPageItem.path}`"
-          class="basic-shadow-button"
-        >
-          <p class="flex-center">
-            {{ demoPageItem.name }}
-          </p>
-        </NuxtLink>
-      </div>
-    </div>
+    </div> -->
   </div>
 </template>

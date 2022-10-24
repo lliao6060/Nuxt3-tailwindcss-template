@@ -32,12 +32,9 @@ watch(localeUserSetting, () => {
           class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700"
         >
           <Icon icon="fa6-solid:language" />
-          <!-- <Icon class="i-ph-translate-bold text-lg dark:text-white" /> -->
         </div>
       </ListboxButton>
-      <ListboxOptions
-        class="absolute top-full right-0 z-[999] mt-2 w-40 overflow-hidden rounded-lg bg-white text-sm font-semibold text-gray-700 shadow-lg shadow-gray-300 outline-none dark:bg-gray-800 dark:text-white dark:shadow-gray-500 dark:ring-0"
-      >
+      <ListboxOptions class="list-box-options">
         <ListboxOption
           v-for="lang in availableLocales"
           :key="lang.iso"

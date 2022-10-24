@@ -12,7 +12,7 @@ const locale = useState<string>('locale.i18n')
       <NuxtLayout>
         <!-- Nuxt 3 提供的頁面載入的進度條 -->
         <NuxtLoadingIndicator />
-        <NuxtPage />
+        <NuxtPage class="align-center"/>
       </NuxtLayout>
     </Body>
   </Html>

@@ -4,10 +4,18 @@
 <template>
   <div id="default-layout" class="layout select-none">
     <Navbar />
-    <main class="w-4/5">
+    <main
+      class="
+      w-full
+      md:w-11/12
+      xl:w-4/5
+      mx-auto
+      text-xl-lg
+    "
+    >
       <slot />
     </main>
-    <footer class="bg-sky-600 flex-center">
+    <footer class="bg-sky-600 flex-center text-2xl text-white">
       footer
     </footer>
   </div>

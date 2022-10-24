@@ -68,15 +68,24 @@ const toggleMenu = (): void => {
     </nav>
     <div
       class="
+        absolute
+        top-[7vh]
         w-full
         md:items-center
         md:w-auto
         xl:hidden
-        h-0 transition-all ease-out duration-500
+        h-0
+        transition[height]
+        ease-out
+        duration-500
+        z-[999]
       "
-      :class="{ 'h-48': isMenuShow }"
+      :class="{ 'bg-sky-600 h-64': isMenuShow }"
     >
-      <NavbarMenuList />
+      <NavbarMenuList
+        class="hidden"
+        :class="{ 'd-block': isMenuShow }"
+      />
     </div>
   </header>
 </template>

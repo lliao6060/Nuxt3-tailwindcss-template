@@ -21,23 +21,23 @@ export const demoPageList: demoPage[] = [
     path: 'pinia',
   },
   {
-    name: 'Nested',
+    name: '鑲套路由',
     path: 'nested',
   },
   {
-    name: 'Demo different layout',
+    name: '不同layout',
     path: 'different-layout',
   },
   {
-    name: 'Dynamic params user page',
+    name: '動態路由',
     path: 'user',
   },
   {
-    name: 'Demo UseState Hook',
+    name: 'UseState',
     path: 'counter/increment',
   },
   {
-    name: 'Demo UseFeatch Hook',
-    path: 'about/use-featch',
+    name: 'UseFeatch',
+    path: 'use-featch',
   },
 ]
