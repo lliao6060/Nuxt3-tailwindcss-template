@@ -8,6 +8,7 @@
 - remock.js
 1. 搭配了`$i18n`在切換語言時拿不同語言的資料，新增資料時請至`mock`創建一個`xxx.ts`檔案，並且至`common/types`新增型別，並在頁面中直接使用即可。
 2. 封裝了`ohmyfetch的hook`在`composables/useApis`裡組件內可以直接調用，範例請參照`pages/mock-api.vue`
+3. `Headless UI`相關的組件放在`pages/components-demo`
 
 ### use plugins
 - [Eslint](https://eslint.org)

@@ -1,6 +1,23 @@
 <script setup name="UseFeatchDemo">
-const { data, pending, error, refresh } = await useLazyFetch('/api/about', {
-  pick: ['name', 'counter'],
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
+const localeUserSetting = useCookie('locale')
+const currentLang = computed(() => {
+  let lang = localeUserSetting.value.slice(3).toLocaleLowerCase() ?? 'tw'
+  if (lang === 'us')
+    lang = 'en'
+  return lang
+})
+
+const { data, pending, error, refresh } = await useFetch(`/api/user?lang=${currentLang.value}`, {
+  // pick: ['name', 'counter'],
+})
+
+watch(locale, (nV) => {
+  if (nV)
+    // refresh()
+    window.location.reload()
 })
 </script>
 
