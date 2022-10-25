@@ -1,1 +1,1 @@
-export * from './index-page'
+export * from './mock-api'

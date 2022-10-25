@@ -1,27 +1,42 @@
 <script setup lang="ts" name="MockApi">
 import { useI18n } from 'vue-i18n'
+import type { mockUserList } from '~/common/types'
+import api from '~/mock'
 
 const { useMockApi, useApi } = useApis()
-const { $getUserList } = useNuxtApp()
-
-const userList = ref([])
-const loading = ref(false)
+const { $createMockApi } = useNuxtApp()
 const { locale } = useI18n()
+
+const userList = ref<mockUserList[]>([])
+const loading = ref<boolean>(false)
+
+const currentLang = computed(() => {
+  let lang = locale.value.slice(3).toLocaleLowerCase() ?? 'tw'
+  if (lang === 'us')
+    lang = 'en'
+  return lang
+})
 
 const getUserList = async () => {
   loading.value = true
-  const res = await useMockApi($getUserList(locale))
+  const res = await useMockApi($createMockApi(api.mockDatas.mockUserList(currentLang.value)))
   if (res) {
     userList.value = res.list
     loading.value = false
   }
 }
 
+// 正式api測試
 const getApi = async () => {
   const res = await useApi('https://jsonplaceholder.typicode.com/users', 'get')
   // eslint-disable-next-line no-console
   console.log(res)
 }
+
+watch(locale, (nV) => {
+  if (nV)
+    getUserList()
+})
 
 onMounted(async () => {
   const apis = [getUserList(), getApi()]
