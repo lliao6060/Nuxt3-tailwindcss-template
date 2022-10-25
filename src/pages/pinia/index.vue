@@ -20,7 +20,6 @@ useHead({
     </NuxtLink>
     <div class="global-text">
       <pre>{{ counter.$state }}</pre>
-      <!-- Remove this component to get started! -->
       <p>
         N: {{ counter.n }}
         <br>

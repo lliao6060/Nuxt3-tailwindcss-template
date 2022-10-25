@@ -17,7 +17,7 @@
     <main class="w-4/5">
       <slot />
     </main>
-    <footer class="bg-red-400 flex-center bg-red-600 text-white text-xl">
+    <footer class="flex-center bg-red-600 text-white text-xl">
       this is custom footer
     </footer>
   </div>
