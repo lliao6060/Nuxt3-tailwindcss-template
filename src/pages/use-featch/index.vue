@@ -5,7 +5,7 @@ const { data, pending, error, refresh } = await useLazyFetch('/api/about', {
 </script>
 
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center align-center">
     <p class="text-2xl text-gray-600 dark:text-white">
       請求狀態:
       {{ pending ? '請求中' : '完成' }}

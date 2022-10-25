@@ -3,6 +3,16 @@ import { useI18n } from 'vue-i18n'
 import type { mockUserList } from '~/common/types'
 import api from '~/mock'
 
+const title = ref<string | any>('MockApi Page')
+const description = ref<string>('MockApi Page Description')
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description,
+  }],
+})
+
 const { useMockApi, useApi } = useApis()
 const { $createMockApi } = useNuxtApp()
 const { locale } = useI18n()

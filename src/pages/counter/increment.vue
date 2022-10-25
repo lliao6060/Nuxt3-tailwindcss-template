@@ -3,7 +3,7 @@ const counter = useState('counter', () => 0)
 </script>
 
 <template>
-  <div class="py-24">
+  <div class="py-24 align-center">
     <div class="flex flex-col items-center">
       <span class="text-9xl font-semibold text-sky-600">{{ counter }}</span>
       <div class="mt-8 flex flex-row">
