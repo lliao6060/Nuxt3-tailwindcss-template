@@ -70,7 +70,7 @@ const toggleMenu = (): void => {
       class="
         absolute
         top-[7vh]
-        w-full
+        w-100
         md:items-center
         md:w-auto
         xl:hidden
@@ -80,7 +80,7 @@ const toggleMenu = (): void => {
         duration-500
         z-[999]
       "
-      :class="{ 'bg-sky-600 h-64': isMenuShow }"
+      :class="{ 'bg-sky-600 h-80': isMenuShow }"
     >
       <NavbarMenuList
         class="hidden"

@@ -40,4 +40,8 @@ export const demoPageList: demoPage[] = [
     name: 'UseFeatch',
     path: 'use-featch',
   },
+  {
+    name: 'Mock Api',
+    path: 'mock-api',
+  },
 ]

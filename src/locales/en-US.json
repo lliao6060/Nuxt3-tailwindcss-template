@@ -1,3 +1,6 @@
 {
-  "hello": "Nuxt3-i18n-pinia-tailwindcss-template"
+  "hello": "Nuxt3-i18n-pinia-tailwindcss-template",
+  "apiPage": {
+    "title": "Mock Api Example"
+  }
 }

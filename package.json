@@ -25,6 +25,7 @@
     "maju-ui": "^1.2.0",
     "ohmyfetch": "^0.4.19",
     "pinia": "2.0.22",
+    "remockjs": "^0.1.0",
     "vite-plugin-vue-setup-extend": "^0.4.0"
   },
   "devDependencies": {
